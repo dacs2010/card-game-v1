@@ -14,3 +14,14 @@ body {
     width: auto;
     height: 100%;
 }
+
+#target-1 {
+    position: relative;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    top: 50px;
+    left: 50px;
+    transition: left .5s ease-in, top .5s ease-in;
+}
