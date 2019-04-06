@@ -5,10 +5,10 @@ function moveTarget(){
 
 
     document.addEventListener("mousedown", function(){
-        console.log(event.offsetX)
-        console.log(event.offsetY)
-        target.style.top = event.offsetY + "px"
-        target.style.left = event.offsetX + "px"
+        // console.log(event)
+        console.log(event.srcElement.id)
+        target.style.top = event.offsetY - 50 + "px"
+        target.style.left = event.offsetX - 50 + "px"
     })
 }
 
