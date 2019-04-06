@@ -24,4 +24,5 @@ body {
     top: 50px;
     left: 50px;
     transition: left .5s ease-in, top .5s ease-in;
+    pointer-events: none;
 }
