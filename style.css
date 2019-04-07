@@ -23,6 +23,6 @@ body {
     border-radius: 20px;
     top: 50px;
     left: 50px;
-    transition: left .5s ease-in, top .5s ease-in;
-    pointer-events: none;
+    transition: left 2s, top 2s;
+    /* pointer-events: none; */
 }
