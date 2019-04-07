@@ -1,15 +1,28 @@
 console.log("connected")
 
-function moveTarget(){
-    let target = document.querySelector("#target-1")
+
+// click on card to play
+// it is highlighted (click again to deselect)
+// click on a game board location to move the card to that spot
 
 
-    document.addEventListener("mousedown", function(){
-        // console.log(event)
-        console.log(event.srcElement.id)
-        target.style.top = event.offsetY - 50 + "px"
-        target.style.left = event.offsetX - 50 + "px"
+
+function selectCard() {
+    document.addEventListener("click", function () {
+        console.log(event.srcElement, event.clientX,  event.clientY)
+
+    // highlight the target
+    target = document.querySelector(".target")
+    if (target.classList.contains("target")) {
+        target.classList.toggle("selected")
+    }
+    // move card to next mouse click location
+    if (target.classList.contains("selected")) {
+        target.style.top = `${event.clientY}px`
+        target.style.left = `${event.clientX}px`
+    }
+
     })
 }
 
-moveTarget()
+selectCard()
